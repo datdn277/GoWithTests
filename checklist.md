@@ -9,7 +9,7 @@ Dưới đây là danh mục các quy tắc bắt buộc phải tuân thủ khi 
 * [ ] **Import thư viện:** Phải khai báo `import "testing"` ở đầu file để có thể sử dụng kiểu dữ liệu `*testing.T`.
 
 ## 2. Quy tắc viết code và định dạng trong test
-* [ ] **Sử dụng Helper (nếu có):** Nếu viết hàm bổ trợ để so sánh kết quả (`assertion helper`), bắt buộc phải gọi `t.Helper()` ở đầu hàm để báo lỗi hiển thị đúng dòng code bị sai.
+* [ ] **Sử dụng Helper (nếu có):** Nếu viết hàm bổ trợ để so sánh kết quả (`assertion helper`), bắt buộc phải gọi `t.Helper()` ở đầu hàm để báo lỗi hiển thị đúng dòng code bị sai ở vị trí gọi chứ không phải ở hàm helper.
 * [ ] **Định dạng thông báo lỗi:** Sử dụng `%q` trong hàm `t.Errorf` để bao bọc các giá trị kết quả trong dấu ngoặc kép, giúp dễ dàng phát hiện khoảng trắng thừa hoặc chuỗi rỗng.
 * [ ] **Rút gọn tham số hàm helper:** Khi truyền nhiều tham số cùng kiểu dữ liệu vào hàm helper, hãy gom lại ngắn gọn (Ví dụ: dùng `(got, want string)` thay vì `(got string, want string)`).
 
