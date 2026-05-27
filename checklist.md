@@ -19,3 +19,8 @@ Dưới đây là danh mục các quy tắc bắt buộc phải tuân thủ khi 
 * [ ] **Xác nhận test lỗi:** Đảm bảo bài test phải chạy thất bại với một thông báo lỗi rõ ràng, có ý nghĩa trước khi viết code xử lý logic.
 * [ ] **Viết mã xử lý vừa đủ:** Chỉ viết lượng mã nguồn vừa đủ để vượt qua bài test (làm cho test chuyển sang màu xanh).
 * [ ] **Tối ưu hóa (Refactor):** Tiến hành tối ưu và làm sạch cả mã nguồn chính lẫn mã test sau khi các bài test đã chạy thành công.
+
+## 4. Quy tắc về Con trỏ (Pointer) và Struct Receiver (Mới bổ sung)
+* [ ] **Tận dụng Tự động giải băm (Automatic Dereferencing):** Khi làm việc với con trỏ struct (struct pointers), hãy viết trực tiếp cú pháp dạng w.balance thay vì viết rườm rà dạng (*w).balance. Trình biên dịch Go sẽ tự động giải băm ngầm.
+
+* [ ] **Giữ đồng nhất kiểu Method Receiver (Consistency Convention):** Nếu một Struct đã có các phương thức bắt buộc phải dùng Pointer Receiver (ví dụ: các hàm thay đổi trạng thái như Deposit, Withdraw), thì tất cả các phương thức còn lại của Struct đó (kể cả hàm chỉ đọc như Balance) cũng nên được khai báo dưới dạng Pointer Receiver để đảm bảo tính nhất quán của API và tránh việc sao chép dữ liệu không đồng bộ.
